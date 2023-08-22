@@ -38,7 +38,7 @@ This is a really fun project, and one to show your family and friends when you'v
 
 ## Task 4: Fetching the data
 
-- [ ] Inside `frontend/components/App.js` add state for the data you'll get from NASA.
+- [x] Inside `frontend/components/App.js` add state for the data you'll get from NASA.
 - [ ] Add an effect hook to handle the API call side effect after the first render of App.
 - [ ] Go to the [NASA APOD API docs](https://api.nasa.gov/#apod) and learn how to make the API call.
 - [ ] Using the endpoint given in the docs, fetch the data using `axios`, which is already installed in the project.
