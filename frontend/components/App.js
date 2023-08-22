@@ -1,6 +1,19 @@
 import React from 'react'
 import {useState, useEffect} from 'react';
 import Axios from 'axios';
+import styled from 'styled-components';
+
+const Nasa = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70vw;
+`;
+const Image = styled.img`
+  max-width: 50vw;
+  margin: 20px;
+`;
 
 function App () {
   const [picture, setPicture] = useState({title: '', date: '', explanation: '', hdurl: ''});
@@ -19,13 +32,13 @@ function App () {
   useEffect(getPic, []);
 
   return (
-    <div className='nasa'>
+    <Nasa>
       <h1>{picture.title}</h1>
       <h2>{picture.date}</h2>
       <p>{picture.explanation}</p>
-      <img src={picture.hdurl} alt={'image of ' + picture.title}/>
+      <Image src={picture.hdurl} alt={'image of ' + picture.title}/>
       <button onClick={getPic}>New Random Photo</button>
-    </div>
+    </Nasa>
   )
 }
 
